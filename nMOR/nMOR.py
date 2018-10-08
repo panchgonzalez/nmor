@@ -27,9 +27,6 @@ def add_arguments(parser):
                       help="Number of units to in each layer for the bi-RNN.")
   parser.add_argument("--time_major", type="bool", nargs="?", const=True,
                       help="Whether to use time-major mode.")
-  parser.add_argument("--param_var", type="bool", nargs="?", const=True,
-                      default=False,
-                      help="Whether to train for parameter-varying systems.")
 
   # Optimizer
   parser.add_argument("--optimizer", type=str, default="sgd", help="adam | sgd")
@@ -163,7 +160,6 @@ def create_hparams(flags):
       # Network
       num_units=flags.num_units,
       time_major=flags.time_major,
-      param_var=flags.param_var,
 
       # Optimizer
       optimizer=flags.optimizer,

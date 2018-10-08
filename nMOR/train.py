@@ -137,11 +137,7 @@ def train(hparams, scope=None, target_session=""):
     model_creator = nMOR_model.Model1D
     load_data = data_utils.load_1D_data
   elif len(hparams.data_size) == 2:
-    if hparams.param_var is True:
-      # NOTE: ParamVarModel for 2D data only
-      model_creator = nMOR_model.ParamVarModel
-    else:
-      model_creator = nMOR_model.Model2D
+    model_creator = nMOR_model.Model2D
     load_data = data_utils.load_2D_data
   else:
     raise ValueError("No model for %d-D data" % (len(hparams.data_size)))

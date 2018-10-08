@@ -12,7 +12,7 @@ import tensorflow as tf
 
 
 def check_tensorflow_version():
-  min_tf_version = "1.3.0"
+  min_tf_version = "1.4.0"
   if tf.__version__ < min_tf_version:
     raise EnvironmentError("Tensorflow version must be >= %s" % min_tf_version)
 

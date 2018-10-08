@@ -60,13 +60,12 @@ def create_train_model(model_creator, hparams, scope=None):
 
     # Define dataset from placeholder, will be fed in during training
     data_placeholder = tf.placeholder(data_dtype, data_shape)
-    dataset = tf.contrib.data.Dataset.from_tensor_slices(data_placeholder)
+    dataset = tf.data.Dataset.from_tensor_slices(data_placeholder)
 
     iterator = iterator_utils.get_iterator(
         dataset,
         batch_size=hparams.batch_size,
         random_seed=hparams.random_seed,
-        param_var=hparams.param_var,
         src_max_len=hparams.src_max_len,
         tgt_max_len=hparams.tgt_max_len,
         output_buffer_size=None)
@@ -105,13 +104,12 @@ def create_eval_model(model_creator, hparams, scope=None):
 
     # Define dataset from placeholder, will be fed in during evaluation
     data_placeholder = tf.placeholder(data_dtype, data_shape)
-    dataset = tf.contrib.data.Dataset.from_tensor_slices(data_placeholder)
+    dataset = tf.data.Dataset.from_tensor_slices(data_placeholder)
 
     iterator = iterator_utils.get_iterator(
         dataset,
         batch_size=hparams.batch_size,
         random_seed=hparams.random_seed,
-        param_var=hparams.param_var,
         src_max_len=hparams.src_max_len,
         tgt_max_len=hparams.tgt_max_len,
         output_buffer_size=None)
@@ -151,13 +149,12 @@ def create_infer_model(model_creator, hparams, scope=None):
 
     # Define dataset from placeholder, will be fed in during inference
     data_placeholder = tf.placeholder(data_dtype, data_shape)
-    dataset = tf.contrib.data.Dataset.from_tensor_slices(data_placeholder)
+    dataset = tf.data.Dataset.from_tensor_slices(data_placeholder)
 
     iterator = iterator_utils.get_infer_iterator(
         dataset,
         batch_size=hparams.infer_batch_size,
-        num_infer_steps=hparams.num_infer_steps,
-        param_var=hparams.param_var)
+        num_infer_steps=hparams.num_infer_steps)
 
     model = model_creator(
         hparams,
