@@ -7,8 +7,8 @@ BASE_DIR=`pwd`
 # Model and data directories from args
 OUTPUT_DIR=${BASE_DIR}
 DATA_DIR=${HOME}/path/to/data/directory
-NUM_UNITS=8
-NUM_STEPS=$1
+NUM_UNITS=$1
+NUM_STEPS=$2
 
 # Train and test datasets to use
 TRAIN_DATA_DIR=${DATA_DIR}/path/to/train/data.h5
