@@ -1,5 +1,5 @@
 # nMOR: *neural* Model Order Reduction
-## Deep learning framework for model reduction of dynamial systems
+## Deep learning framework for model reduction of dynamical systems
 
 *Authors: [Francisco J. Gonzalez](http://franciscojgonzalez.com)*
 
