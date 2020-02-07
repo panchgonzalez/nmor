@@ -6,7 +6,7 @@
 This code was primarily developed for the paper *[Deep convolutional recurrent autoencoders for learning low-dimensional feature dynamics of fluid systems](https://arxiv.org/abs/1808.01346).*
 
 <p align="center">
-<img width="35%" src="nMOR/doc/learning_vortices.gif" />
+<img width="35%" src="nmor/doc/learning_vortices.gif" />
 <br>
 Figure 1. <b>Learning low-dimensional dynamics</b> - this animation depicts the
 process of learning the dynamics of two vortices governed by the Navier-Stokes equations using nMOR.
@@ -34,7 +34,7 @@ RNN (constructed using a modified version of an LSTM), depicted in Figures 2 and
 
 ## Convolutional Autoencoder
 <p align="center">
-<img width="100%" src="nMOR/doc/cnn_autoencoder.png" />
+<img width="100%" src="nmor/doc/cnn_autoencoder.png" />
 <br>
 Figure 2. <b>Convolutional Autoencoder</b> - this architecture is used to learn
 an efficient low-dimensional representation of the physical data.
@@ -52,7 +52,7 @@ ROMs and fully-connected autoencoders
 
 ## Evolver RNN
 <p align="center">
-<img width="50%" src="nMOR/doc/rnn.png" />
+<img width="50%" src="nmor/doc/rnn.png" />
 <br>
 Figure 3. <b>Modified LSTM network</b> - this RNN architecture is used to
 learn the dynamics of low-dimensional representation on its underlying nonlinear manifold.
