@@ -1,7 +1,7 @@
 # nMOR: *neural* Model Order Reduction
 ## Deep learning framework for model reduction of dynamical systems
 
-*Authors: [Francisco J. Gonzalez](http://franciscojgonzalez.com)*
+*Authors: [Francisco J. Gonzalez](http://panch.io)*
 
 This code was primarily developed for the paper *[Deep convolutional recurrent autoencoders for learning low-dimensional feature dynamics of fluid systems](https://arxiv.org/abs/1808.01346).*
 
